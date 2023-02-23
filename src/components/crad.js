@@ -1,5 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
+import { ReloadInstructions } from "react-native/Libraries/NewAppScreen";
 
 const Card = (props) => {
 
@@ -9,7 +10,9 @@ const Card = (props) => {
     // const bd = props.bd ; 
 
     return (
+        <View>
         <View style={styies.cardContainer}>
+    
             <View style={styies.innerTopContaner}>
                 <Image style={styies.img} source={require('../assets/images/smer.webp')} />
                 <View style={styies.textContainer}>
@@ -21,6 +24,10 @@ const Card = (props) => {
                 <Text style={styies.smer}> {`MY UI ${index}`}</Text>
             </View>
         </View>
+        
+        </View>
+        
+        
     )
 }
 
@@ -87,7 +94,18 @@ const styies = StyleSheet.create({
         marginLeft: -10,
         color: 'white'
 
+    },
+    Search :{
+        justifyContent:'center',
+        backgroundColor :'red',
+        margin : 20,
+        width: 120,
+        height : 20,
+       
+
     }
 })
+
+
 
 export default Card; 
